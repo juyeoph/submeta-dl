@@ -40,7 +40,7 @@ if __name__ == "__main__":
             results = parse_course_toc(data)
 
             for line in results:
-                print(line + "\n")
+                print(line)
 
             with open('result.txt', 'w', encoding='utf-8') as outfile:
                 for line in results:
