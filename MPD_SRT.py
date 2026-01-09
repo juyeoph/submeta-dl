@@ -24,7 +24,11 @@ def extract_subtitles_only(url, title):
 
         for lang in ['ko', 'en']:
             vtt_file = f"{title}.{lang}.vtt"
-            srt_file = f"{title}.{lang}.srt"
+
+            if lang == 'ko':
+                srt_file = f"{title}.srt"
+            else:
+                srt_file = f"{title}.{lang}.srt"
 
             if os.path.exists(vtt_file):
                 print(f"Converting {vtt_file} to {srt_file}...")
