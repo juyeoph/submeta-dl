@@ -7,7 +7,7 @@ from datetime import timedelta
 # --- 설정 구간 ---
 INPUT_FOLDER = "srt"  # 원본 자막 폴더 (작업 후 비워짐)
 OUTPUT_FOLDER = "merged_srt"  # 결과물 폴더 (시작 전 초기화됨)
-MAX_CHAR_LIMIT = 32  # 영어 기준 병합 (60~70 추천)
+MAX_CHAR_LIMIT = 60  # 영어 기준 병합 (60~70 추천)
 MAX_GAP_SECONDS = 1.5  # 1.5초 이상 침묵이면 합치지 않음
 
 
