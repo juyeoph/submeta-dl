@@ -42,7 +42,12 @@ def merge_subtitles(input_path, output_path, max_chars, max_gap_seconds):
             new_subs.append(current_sub)
             current_sub = next_sub
 
+    # 마지막 자막 추가
     new_subs.append(current_sub)
+
+    # [수정된 부분] 자막 번호(Index)를 1부터 순서대로 재정렬
+    for idx, sub in enumerate(new_subs):
+        sub.index = idx + 1
 
     final_file = pysrt.SubRipFile(new_subs)
     final_file.save(output_path, encoding='utf-8')
